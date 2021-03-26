@@ -1,0 +1,45 @@
+@import './variables.scss';
+
+footer {
+  padding: 25px 0 25px 0;
+  text-align: center;
+}
+
+footer button {
+  position: relative;
+  background-color: $button-color;
+  padding: 10px 25px;
+  border-radius: 10px;
+  font-family: 'poppinsmedium';
+  font-weight: 600;
+  font-size: 16px;
+  border: none;
+
+  & h4 {
+    position: relative;
+    padding-left: 25px;
+    color: $text-color;
+  }
+
+  & h4::before {
+    content: '';
+    position: absolute;
+    width: 14px;
+    height: 2px;
+    left: 0;
+    bottom: 50%;
+    background-color: $text-color;
+    transform: translate(0, 50%);
+  }
+
+  & h4::after {
+    position: absolute;
+    content: '';
+    width: 14px;
+    height: 2px;
+    left: 0;
+    bottom: 50%;
+    background-color: $text-color;
+    transform: translate(0, 50%) rotate(90deg);
+  }
+}
