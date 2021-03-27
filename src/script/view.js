@@ -82,8 +82,4 @@ export const view = {
   openPopupDelete(show) {
     popupDelete.style.display = show ? 'block' : 'none';
   },
-  debug() {
-    console.log('debug: template');
-    window.debug = template;
-  },
 };

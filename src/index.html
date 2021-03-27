@@ -85,17 +85,22 @@
     <script id="task-template" type="text/template">
       {{#tasks}}
         <div id="{{_id}}" class="grid-container">
-          <input type="checkbox" {{checked}} onclick="vm.fulfilled('{{_id}}')"/>
-          <span class="date">{{formatDate}}</span>
+          <input type="checkbox" class="custom-checkbox" id="happy-{{_id}}" name="happy" value="yes" {{checked}} onclick="vm.fulfilled('{{_id}}')"/>
+          <label for="happy-{{_id}}" class="date date-color">{{formatDate}}</label>
+
+          <div></div>
+          <!-- <span class="date date-color">{{formatDate}}</span> -->
+
           <div class="task__images">
             <div id="edit-complete-{{_id}}" onclick="vm.editComplete('{{_id}}')" style="display: none;"></div>
           <div id="edit-{{_id}}" onclick="vm.edit('{{_id}}')"></div>
+
           <div id="delete-{{_id}}" onclick="vm.delete('{{_id}}')"></div>
         </div>
 
         <div></div>
         <div id="task-input-container-{{_id}}">
-          <p class="message">{{message}}</p>
+          <p class="message {{fulfilledText}}">{{message}}</p>
         </div>
         <div></div>
       </div>

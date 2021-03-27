@@ -30,7 +30,9 @@ export const formatData = (task) => {
   return Object.assign(
     {
       formatDate: formatDate(task.updatedAt),
+      // formatDate: formatDate(task.updatedAt).replace(' ', '&nbps'),
       checked: task.fulfilled ? 'checked' : '',
+      fulfilledText: task.fulfilled ? 'fulfilled-text' : '',
     },
     task
   );

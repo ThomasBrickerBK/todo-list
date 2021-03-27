@@ -97,7 +97,6 @@ const vm = vue3({
     this.tasks = await task.getAll();
     view.subscribeToCreatingInput(this.inputCreateMessage);
     view.subscribeToEditingInput(this.inputEditMessage);
-    view.debug();
   },
 });
 

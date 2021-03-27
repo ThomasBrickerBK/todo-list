@@ -114,11 +114,70 @@
   font-family: 'poppinslight';
   font-weight: 400;
   font-size: 14px;
+  color: $message-base-text-color;
+}
+
+.textarea__edit{
+  color: $message-edit-text-color;
+}
+
+.fulfilled-text{
+  text-decoration: line-through;
+  color: $message-fulfilled-text-color;
+}
+
+.date-color{
+  color: $date-text-color;
 }
 
 .date {
-  color: $bg-first-color;
   font-size: 12px;
+  width: 300px;
+}
+
+.checkbox-fulfilled{
+  background-color: $checkbox-color;
+}
+
+.custom-checkbox {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+.custom-checkbox+label {
+  display: inline-flex;
+  align-items: center;
+  user-select: none;
+}
+.custom-checkbox+label::before {
+  content: '';
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  flex-grow: 0;
+  border: 1px solid $checkbox-color;
+  border-radius: 2px;
+  margin-right: 8px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 50% 50%;
+}
+
+.custom-checkbox:checked+label::before {
+  border-color: $checkbox-color;
+  background-color: $checkbox-color;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 7'%3e%3cpath fill='none' d='M1 3.5L3.66667 6L9 1'  stroke='white' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round' /%3e%3c/svg%3e");
+}
+
+.custom-checkbox:not(:disabled)+label:hover::before {
+  border-color:$checkbox-color;
+  box-shadow: 0 0 0 0.2rem $checkbox-shadow-color
+}
+
+.custom-checkbox:not(:disabled):active+label::before {
+  background-color: $checkbox-color;
+  border-color: $checkbox-color;
 }
 
 .message-input {
