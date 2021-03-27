@@ -1,3 +1,3 @@
 # ToDo
 
-(demo)[https://thomasbrickerbk.github.io/todo-list/]
+[**Demo**](https://thomasbrickerbk.github.io/todo-list/)
