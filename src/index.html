@@ -56,7 +56,7 @@
     </footer>
 
     <div id="host-input" style="display: none">
-      <textarea rows="7" id="edit-task-input" class="textarea__edit"></textarea>
+      <textarea id="edit-task-input" class="textarea__edit"></textarea>
     </div>
 
     <div class="popup__container" id="popup-delete">
@@ -89,7 +89,6 @@
           <label for="happy-{{_id}}" class="date date-color">{{formatDate}}</label>
 
           <div></div>
-          <!-- <span class="date date-color">{{formatDate}}</span> -->
 
           <div class="task__images">
             <div id="edit-complete-{{_id}}" onclick="vm.editComplete('{{_id}}')" style="display: none;"></div>

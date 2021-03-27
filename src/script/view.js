@@ -63,9 +63,11 @@ export const view = {
       editBtn.style.display = !edit ? 'block' : 'none';
       editedElem = task;
       const container = getInputContainer(id);
+      container.style.height = `${container.children[0].clientHeight}px`;
+      editTaskInput.style.height = `${container.children[0].clientHeight}px`;
       container.innerHTML = '';
       container.append(editTaskInput);
-      window.rr = container;
+      window.rr = editTaskInput;
     }
     if (!edit && editedElem?.id === id) {
       const [editCompleteBtn, editBtn] = getButtons(id);
